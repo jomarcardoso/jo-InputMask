@@ -1,0 +1,19 @@
+{
+  "name": "jo-inputmask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./assets/js/inputMask.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jomarcardoso/jo-InputMask.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jomarcardoso/jo-InputMask/issues"
+  },
+  "homepage": "https://github.com/jomarcardoso/jo-InputMask#readme"
+}
