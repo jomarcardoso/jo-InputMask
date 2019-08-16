@@ -52,7 +52,7 @@ function iterationMask(value, mask, concatenator) {
   }, '');
 }
 
-export function mask(value, mask) {
+export function toMask(value, mask) {
   function concatenator(string, symbol) {
     return `${string}${symbol}`;
   }
@@ -60,7 +60,7 @@ export function mask(value, mask) {
   return iterationMask(value, mask, concatenator);
 }
 
-export function unMask(value, mask) {
+export function toUnMask(value, mask) {
   function concatenator(string) {
     return string;
   }
