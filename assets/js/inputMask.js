@@ -31,7 +31,9 @@ function iterationMask(value, mask, concatenator) {
   let valuePosition = 0;
 
   function applyMask(maskApplier) {
-    const newValue = maskApplier(value[valuePosition]);
+    const currentValue = value[valuePosition];
+    if (!currentValue) return '';
+    const newValue = maskApplier(currentValue);
     valuePosition += 1;
     if (newValue !== '') {
       return newValue;
@@ -40,6 +42,8 @@ function iterationMask(value, mask, concatenator) {
   }
 
   return arrayMask.reduce((previousValue, currentSimbol, index) => {
+    if (valuePosition === value.length) return previousValue;
+    console.log(valuePosition)
     const maskApplier = simbols[currentSimbol];
     if (!maskApplier) return concatenator(previousValue, currentSimbol);
 
